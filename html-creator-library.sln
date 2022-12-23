@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "html-creator-library", "html-creator-library\html-creator-library.csproj", "{B78C8A6D-2BBE-43F5-AAB9-4728545012ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "library-test", "library-test\library-test.csproj", "{63FC97CF-57FD-4E30-8E57-6CED137BFDE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B78C8A6D-2BBE-43F5-AAB9-4728545012ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B78C8A6D-2BBE-43F5-AAB9-4728545012ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B78C8A6D-2BBE-43F5-AAB9-4728545012ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63FC97CF-57FD-4E30-8E57-6CED137BFDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63FC97CF-57FD-4E30-8E57-6CED137BFDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63FC97CF-57FD-4E30-8E57-6CED137BFDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63FC97CF-57FD-4E30-8E57-6CED137BFDE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
