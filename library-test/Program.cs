@@ -3,10 +3,16 @@ using html_creator_library.Components;
 
 Body testBody = new();
 testBody.SetContext(
-    new Button(
-        new Button()
+    new Text(
+        text: "Hello",
+        textType: TextType.H1
     ),
-    new Button()
+    new Button(
+        new Text(
+            text: "button",
+            textType: TextType.Default
+        )
+    )
 );
 HTML test = new(
     body: testBody
