@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace html_creator_library
+﻿namespace html_creator_library
 {
     public class HTML
     {
         private Body body = new Body();
-        private string tab = "\t";
+        private Head head = new Head();
 
-        public void SetBody(Body body)
+        public HTML(Body body = null, Head head = null)
         {
-            this.body = body;
+            this.body = body ?? new Body();
+            this.head = head ?? new Head();
         }
 
         public void SaveFile(string path = "../../../../index.html")
@@ -29,7 +24,8 @@ namespace html_creator_library
             return 
                 $"<!DOCTYPE html>\n" +
                 $"<html>\n" +
-                $"{body.GetHtml(tab)}\n" +
+                $"{head.GetHtml("\t")}\n" +
+                $"{body.GetHtml("\t")}\n" +
                 $"</html>";
         }
     }

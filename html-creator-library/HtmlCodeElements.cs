@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace html_creator_library
 {
-    public abstract class HtmlComponent : HtmlCodeElements
+    public abstract class HtmlCodeElements
     {
-        protected string text;
+        protected string innerTab;
+
+        internal abstract string GetHtml(string outTab);
     }
 }

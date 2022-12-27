@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace html_creator_library
+﻿namespace html_creator_library
 {
-    public class Body
+    public class Body : HtmlCodeElements
     {
         private List<HtmlComponent> htmlComponents = new();
-
-        private string innerTab;
 
         public void SetContext(params HtmlComponent[] components)
         {
@@ -20,7 +12,7 @@ namespace html_creator_library
             }
         }
         
-        internal string GetHtml(string outTab)
+        internal override string GetHtml(string outTab)
         {
             innerTab = outTab + "\t";
             return 
