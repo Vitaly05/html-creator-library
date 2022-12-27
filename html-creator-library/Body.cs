@@ -1,15 +1,10 @@
 ﻿namespace html_creator_library
 {
-    public class Body : HtmlCodeElements
+    public class Body : HtmlComponent
     {
-        private List<HtmlComponent> htmlComponents = new();
-
         public void SetContext(params HtmlComponent[] components)
         {
-            foreach (var component in components)
-            {
-                htmlComponents.Add(component);
-            }
+            innerHtmlComponents.AddRange(components);
         }
         
         internal override string GetHtml(string outTab)
@@ -17,18 +12,8 @@
             innerTab = outTab + "\t";
             return 
                 $"{outTab}<body>\n" +
-                $"{getComponentsHtml()}\n" +
+                $"{getInnerComponentsHtml()}\n" +
                 $"{outTab}</body>";
-        }
-
-        private string getComponentsHtml()
-        {
-            string componentsHtml = "\n";
-            foreach (var component in htmlComponents)
-            {
-                componentsHtml += component.GetHtml(innerTab) + "\n";
-            }
-            return componentsHtml;
         }
     }
 }

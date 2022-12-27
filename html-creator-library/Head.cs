@@ -1,13 +1,14 @@
 ﻿namespace html_creator_library
 {
-    public class Head : HtmlCodeElements
+    public class Head : HtmlComponent
     {
+        
         internal override string GetHtml(string outTab)
         {
             innerTab = outTab + "\t";
             return
                 $"{outTab}<head>\n" +
-                $"{innerTab}\n" +
+                $"{getInnerComponentsHtml()}\n" +
                 $"{outTab}</head>";
         }
     }

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace html_creator_library.Components
+﻿namespace html_creator_library.Components
 {
     public class Button : HtmlComponent
     {      
-        public Button(string text)
+        public Button(params HtmlComponent[] components)
         {
-            this.text = text;
+            innerHtmlComponents.AddRange(components);
         }
 
         internal override string GetHtml(string outTab)
@@ -18,7 +12,7 @@ namespace html_creator_library.Components
             innerTab = outTab + "\t";
             return 
                 $"{outTab}<button>\n" +
-                $"{innerTab}{text}\n" +
+                $"{getInnerComponentsHtml()}\n" +
                 $"{outTab}</button>";
         }
     }
