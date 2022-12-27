@@ -8,14 +8,20 @@ namespace html_creator_library.Components
 {
     public class Button : HtmlComponent
     {
+        private string innerTab;
+
         public Button(string text)
         {
             this.text = text;
         }
 
-        public override void GetInfo()
+        public override string GetHtml(string outTab)
         {
-            Console.WriteLine($"Button: {text}");
+            innerTab = outTab + "\t";
+            return 
+                $"{outTab}<button>\n" +
+                $"{innerTab}{text}\n" +
+                $"{outTab}</button>";
         }
     }
 }

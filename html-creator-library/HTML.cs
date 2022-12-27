@@ -8,22 +8,29 @@ namespace html_creator_library
 {
     public class HTML
     {
-        private List<HtmlComponent> htmlComponents = new();
+        private Body body = new Body();
+        private string tab = "\t";
 
-        public void SetContext(params HtmlComponent[] components)
+        public void SetBody(Body body)
         {
-            foreach(var component in components)
+            this.body = body;
+        }
+
+        public void SaveFile(string path = "../../../../index.html")
+        {
+            using (StreamWriter sw = new(new FileStream(path, FileMode.Create)))
             {
-                htmlComponents.Add(component);
+                sw.Write(getHtml());
             }
         }
 
-        public void PrintComponentsInfo()
+        private string getHtml()
         {
-            foreach (var component in htmlComponents)
-            {
-                component.GetInfo();
-            }
+            return 
+                $"<!DOCTYPE html>\n" +
+                $"<html>\n" +
+                $"{body.GetHtml(tab)}\n" +
+                $"</html>";
         }
     }
 }

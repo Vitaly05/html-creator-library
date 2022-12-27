@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace html_creator_library
 {
-    public abstract class HtmlComponent
+    internal class Head
     {
-        protected string text;
-
-        abstract public string GetHtml(string outTab);
     }
 }

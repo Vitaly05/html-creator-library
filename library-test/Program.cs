@@ -2,8 +2,10 @@
 using html_creator_library.Components;
 
 HTML test = new();
-test.SetContext(
+Body testBody = new();
+testBody.SetContext(
     new Button("button 1"),
     new Button("button 2")
 );
-test.PrintComponentsInfo();
+test.SetBody(testBody);
+test.SaveFile();
