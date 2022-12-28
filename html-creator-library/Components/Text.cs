@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace html_creator_library.Components
+﻿namespace html_creator_library.Components
 {
     public class Text : HtmlComponent
     {
         private string textType;
         private string text;
 
-        public Text(string textType, string text)
+        public Text(string text, string textType = null)
         {
-            this.textType = textType;
+            this.textType = textType ?? TextType.Default;
             this.text = text;
         }
 
@@ -31,7 +25,7 @@ namespace html_creator_library.Components
                 $"</{textType}>";
         }
     }
-
+    
     public static class TextType
     {
         public static string H1 = "h1";
