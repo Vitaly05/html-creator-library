@@ -1,4 +1,4 @@
-﻿namespace html_creator_library.Components
+﻿namespace html_creator_library.BodyComponents
 {
     public class Text : BodyComponent
     {

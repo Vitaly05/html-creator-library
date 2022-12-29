@@ -1,5 +1,6 @@
 ﻿using html_creator_library;
-using html_creator_library.Components;
+using html_creator_library.BodyComponents;
+using html_creator_library.HeadComponents;
 
 Body testBody = new();
 testBody.SetContext(
@@ -14,7 +15,14 @@ testBody.SetContext(
         )
     )
 );
+
+Head testHead = new();
+testHead.SetContext(
+    new Title("Test")
+);
+
 HTML test = new(
-    body: testBody
+    body: testBody,
+    head: testHead
 );
 test.SaveFile();
