@@ -1,6 +1,6 @@
 ﻿namespace html_creator_library.Components
 {
-    public class Text : HtmlComponent
+    public class Text : BodyComponent
     {
         private string textType;
         private string text;

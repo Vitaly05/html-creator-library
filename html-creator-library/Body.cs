@@ -2,7 +2,7 @@
 {
     public class Body : HtmlComponent
     {
-        public void SetContext(params HtmlComponent[] components)
+        public void SetContext(params BodyComponent[] components)
         {
             innerHtmlComponents.AddRange(components);
         }

@@ -1,6 +1,6 @@
 ﻿namespace html_creator_library.Components
 {
-    public class Button : HtmlComponent
+    public class Button : BodyComponent
     {      
         public Button(params HtmlComponent[] components)
         {
