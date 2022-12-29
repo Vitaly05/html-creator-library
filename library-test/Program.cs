@@ -6,13 +6,20 @@ Body testBody = new();
 testBody.SetContext(
     new Text(
         text: "Hello",
-        textType: TextType.Del
+        textType: TextType.Del,
+        attribute: new HtmlAttribute().Class("delText")
     ),
     new Button(
-        new Text(
-            text: "button",
-            textType: TextType.B
-        )
+        attribute: new HtmlAttribute().Class("buttonWithText"),
+        components:
+            new Text(
+                text: "button",
+                textType: TextType.B,
+                attribute: new HtmlAttribute().Id("bText")
+            )
+    ),
+    new Text(
+        text: "Without attribute"
     )
 );
 

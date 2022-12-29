@@ -5,7 +5,14 @@
         private string textType;
         private string text;
 
-        public Text(string text, string textType = null)
+        public Text(string text)
+            : this(text, null) { }
+
+        public Text(string text, string textType)
+            : this(text, textType, new HtmlAttribute()) { }
+
+        public Text(string text, string textType, HtmlAttribute attribute)
+            : base(attribute)
         {
             this.textType = textType ?? TextType.Default;
             this.text = text;
@@ -20,7 +27,7 @@
 
             return
                 $"{outTab}" +
-                $"<{textType}>" +
+                $"<{textType}{attribute.GetAttributes()}>" +
                 $"{text}" +
                 $"</{textType}>";
         }
