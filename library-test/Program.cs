@@ -5,12 +5,12 @@ Body testBody = new();
 testBody.SetContext(
     new Text(
         text: "Hello",
-        textType: TextType.H1
+        textType: TextType.Del
     ),
     new Button(
         new Text(
             text: "button",
-            textType: TextType.Default
+            textType: TextType.B
         )
     )
 );

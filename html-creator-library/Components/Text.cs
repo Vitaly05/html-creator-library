@@ -28,8 +28,30 @@
     
     public static class TextType
     {
-        public static string H1 = "h1";
-        public static string P = "p";
         public static string Default = "";
+        public static string H1 = "h1";
+        public static string H2 = "h2";
+        public static string H3 = "h3";
+        public static string H4 = "h4";
+        public static string H5 = "h5";
+        public static string H6 = "h6";
+        public static string P = "p";
+        public static string B = "b";
+        public static string I = "i";
+        public static string U = "u";
+        public static string Q = "q";
+        public static string Em = "em";
+        public static string Strong = "strong";
+        public static string Del = "del";
+        public static string A = "a";
+        public static string Abbr = "abbr";
+        public static string Address = "address";
+        public static string Blockquote = "blockquote";
+        public static string Code = "code";
+        public static string Dfn = "dfn";
+        public static string Ins = "ins";
+        public static string Small = "small";
+        public static string Sup = "sup";
+        public static string Sub = "sub";
     }
 }
