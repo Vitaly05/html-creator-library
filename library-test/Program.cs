@@ -31,7 +31,8 @@ testBody.SetContext(
     ),
     new Span("ffff", new HtmlAttribute().Color("red")),
     new LineBreak(),
-    new TextArea("Inner text")
+    new TextArea("Inner text"),
+    new Input("color")
 );
 
 Head testHead = new();
