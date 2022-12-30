@@ -12,6 +12,7 @@ testBody.SetContext(
             .Data(name: "myData", value: "myValue")
             .Title("HELLO")
     ),
+    new LineBreak(),
     new Button(
         attribute: new HtmlAttribute().Class("buttonWithText"),
         components:
