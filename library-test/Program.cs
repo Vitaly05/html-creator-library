@@ -34,7 +34,7 @@ testBody.SetContext(
     new TextArea("Inner text"),
     new Input(InputType.Color),
 
-    new OrderedList(
+    new UnorderedList(
         new ListItem(
             new Text("First")
         ),
