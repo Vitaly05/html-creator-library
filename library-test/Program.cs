@@ -22,6 +22,7 @@ testBody.SetContext(
                 attribute: new HtmlAttribute().Id("bText")
             )
     ),
+    new Line(new HtmlAttribute().Color("red").Size("20px").Width("90%")),
     new Text(
         text: "Without attribute"
     )

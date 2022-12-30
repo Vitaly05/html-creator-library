@@ -56,5 +56,20 @@
             addAttribute($"title=\"{title}\"");
             return this;
         }
+        public HtmlAttribute Color(string color)
+        {
+            addAttribute($"color=\"{color}\"");
+            return this;
+        }
+        public HtmlAttribute Size(string size)
+        {
+            addAttribute($"size=\"{size}\"");
+            return this;
+        }
+        public HtmlAttribute Width(string width)
+        {
+            addAttribute($"width=\"{width}\"");
+            return this;
+        }
     }
 }
