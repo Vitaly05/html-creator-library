@@ -32,7 +32,7 @@ testBody.SetContext(
     new Span("ffff", new HtmlAttribute().Color("red")),
     new LineBreak(),
     new TextArea("Inner text"),
-    new Input("color")
+    new Input(InputType.Color)
 );
 
 Head testHead = new();
