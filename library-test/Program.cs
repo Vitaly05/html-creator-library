@@ -32,7 +32,18 @@ testBody.SetContext(
     new Span("ffff", new HtmlAttribute().Color("red")),
     new LineBreak(),
     new TextArea("Inner text"),
-    new Input(InputType.Color)
+    new Input(InputType.Color),
+
+    new OrderedList(
+        new ListItem(
+            new Text("First")
+        ),
+        new ListItem(
+            new Button(
+                new Text("Second")    
+            )
+        )
+    )
 );
 
 Head testHead = new();
