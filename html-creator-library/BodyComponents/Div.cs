@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace html_creator_library.BodyComponents
+﻿namespace html_creator_library.BodyComponents
 {
     public class Div : BodyComponent
     {

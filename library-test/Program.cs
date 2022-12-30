@@ -28,7 +28,8 @@ testBody.SetContext(
     new Line(new HtmlAttribute().Color("red").Size("20px").Width("90%")),
     new Text(
         text: "Without attribute"
-    )
+    ),
+    new Span("ffff", new HtmlAttribute().Color("red"))
 );
 
 Head testHead = new();
