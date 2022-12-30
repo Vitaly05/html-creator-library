@@ -29,7 +29,9 @@ testBody.SetContext(
     new Text(
         text: "Without attribute"
     ),
-    new Span("ffff", new HtmlAttribute().Color("red"))
+    new Span("ffff", new HtmlAttribute().Color("red")),
+    new LineBreak(),
+    new TextArea("Inner text")
 );
 
 Head testHead = new();
