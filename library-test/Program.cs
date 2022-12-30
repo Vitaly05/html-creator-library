@@ -8,6 +8,9 @@ testBody.SetContext(
         text: "Hello",
         textType: TextType.Del,
         attribute: new HtmlAttribute().Class("delText")
+            .Hidden(false)
+            .Data(name: "myData", value: "myValue")
+            .Title("HELLO")
     ),
     new Button(
         attribute: new HtmlAttribute().Class("buttonWithText"),

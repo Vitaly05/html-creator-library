@@ -4,7 +4,7 @@
     {
         private string attrubutes;
 
-        private void addAttrubute(string attribute)
+        private void addAttribute(string attribute)
         {
             attrubutes += $" {attribute}";
         }
@@ -16,12 +16,44 @@
 
         public HtmlAttribute Class(string className)
         {
-            addAttrubute($"class=\"{className}\"");
+            addAttribute($"class=\"{className}\"");
             return this;
         }
         public HtmlAttribute Id(string id)
         {
-            addAttrubute($"id=\"{id}\"");
+            addAttribute($"id=\"{id}\"");
+            return this;
+        }
+        public HtmlAttribute AccessKey(string accessKey)
+        {
+            addAttribute($"accesskey=\"{accessKey}\"");
+            return this;
+        }
+        public HtmlAttribute Data(string name, string value)
+        {
+            addAttribute($"data-{name}=\"{value}\"");
+            return this;
+        }
+        public HtmlAttribute Dir(string dir)
+        {
+            addAttribute($"dir=\"{dir}\"");
+            return this;
+        }
+        public HtmlAttribute Hidden(bool isHidden)
+        {
+            if (isHidden)
+                addAttribute("hidden");
+
+            return this;
+        }
+        public HtmlAttribute TabIndex(int tabIndex)
+        {
+            addAttribute($"tabindex=\"{tabIndex}\"");
+            return this;
+        }
+        public HtmlAttribute Title(string title)
+        {
+            addAttribute($"title=\"{title}\"");
             return this;
         }
     }
