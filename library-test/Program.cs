@@ -1,6 +1,18 @@
 ﻿using html_creator_library;
 using html_creator_library.BodyComponents;
 using html_creator_library.HeadComponents;
+using html_creator_library.Css;
+using html_creator_library.Css.StyleComponents;
+
+
+Style delTextStyle = new Style(
+    selector: ".delText",
+    new Background(Color.Green)
+);
+Style secondStyle = new Style(
+    selector: "button",
+    new Background(Color.Blue)
+);
 
 Body testBody = new();
 testBody.SetContext(
@@ -54,5 +66,9 @@ testHead.SetContext(
 HTML test = new(
     body: testBody,
     head: testHead
+);
+test.SetStyles(
+    delTextStyle,
+    secondStyle
 );
 test.SaveFile();
