@@ -2,13 +2,28 @@
 {
     public class Style
     {
-        private List<StyleComponent> styles = new List<StyleComponent>();
+        private List<StyleComponent> styleParams = new List<StyleComponent>();
         private string selector;
 
-        public Style(string selector, params StyleComponent[] styles)
+        public Style(params StyleComponent[] styleParams)
+        {
+            this.styleParams.AddRange(styleParams);
+        }
+
+        public Style Class(string className)
+        {
+            selector = $".{className}";
+            return this;
+        }
+        public Style Id(string id)
+        {
+            selector = $"#{id}";
+            return this;
+        }
+        public Style Selector(string selector)
         {
             this.selector = selector;
-            this.styles.AddRange(styles);
+            return this;
         }
 
         internal string GetCss()
@@ -25,10 +40,10 @@
         {
             string css = "";
 
-            foreach (var style in styles)
+            foreach (var param in styleParams)
             {
-                css += style.GetCss() +
-                    (styles.Last() != style ? "\n" : "");
+                css += param.GetCss() +
+                    (styleParams.Last() != param ? "\n" : "");
             }
 
             return css;

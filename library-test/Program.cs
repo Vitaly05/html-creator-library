@@ -6,13 +6,11 @@ using html_creator_library.Css.StyleComponents;
 
 
 Style delTextStyle = new Style(
-    selector: ".delText",
     new Background(Color.Green)
-);
+).Class("delText");
 Style secondStyle = new Style(
-    selector: "button",
     new Background(Color.Blue)
-);
+).Selector("button");
 
 Body testBody = new();
 testBody.SetContext(
