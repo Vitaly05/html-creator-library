@@ -6,8 +6,13 @@ using html_creator_library.Css.StyleComponents;
 
 
 Style delTextStyle = new Style(
-    new Background(Color.Green)
+    new Background(Color.Green),
+    new Border().Width("5px", "10px")
+        .Radius("5px", "0")
+        .Color(Color.Blue)
+        .Style(BorderStyle.Solid, BorderStyle.Double)
 ).Class("delText");
+
 Style secondStyle = new Style(
     new Background(Color.Blue)
 ).Selector("button");
@@ -24,6 +29,7 @@ testBody.SetContext(
             .Data(name: "myData", value: "myValue")
             .Title("HELLO")
         ),
+        new LineBreak(),
         new LineBreak(),
         new Button(
             attribute: new HtmlAttribute().Class("buttonWithText"),

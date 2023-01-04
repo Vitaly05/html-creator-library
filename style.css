@@ -1,5 +1,9 @@
 .delText {
 	background: green;
+	border-width: 5px 10px;
+	border-color: blue;
+	border-radius: 5px 0;
+	border-style: solid double;
 }
 
 button {
