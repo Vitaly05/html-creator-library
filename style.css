@@ -4,6 +4,7 @@
 	border-color: blue;
 	border-radius: 5px 0;
 	border-style: solid double;
+	box-shadow: 10px 10px 10px red;
 }
 
 button {
