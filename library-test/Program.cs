@@ -6,13 +6,13 @@ using html_creator_library.Css.StyleComponents;
 
 
 Style delTextStyle = new Style(
-    new Background(Color.Green),
+    new Background(Color.DarkOliveGreen),
     new Border().Width("5px", "10px")
         .Radius("5px", "0")
-        .Color(Color.Blue)
+        .Color(Color.Yellow)
         .Style(BorderStyle.Solid, BorderStyle.Double),
-    new Shadow(ShadowType.Box, "10px", "10px", "10px", Color.Red),
-    new TextColor(Color.Blue)
+    new Shadow(ShadowType.Box, "10px", "10px", "10px", Color.Purple),
+    new TextColor(Color.Orange)
 ).Class("delText");
 
 Style secondStyle = new Style(

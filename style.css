@@ -1,11 +1,11 @@
 .delText {
-	background: green;
+	background: darkolivegreen;
 	border-width: 5px 10px;
-	border-color: blue;
+	border-color: yellow;
 	border-radius: 5px 0;
 	border-style: solid double;
-	box-shadow: 10px 10px 10px red;
-	color: blue;
+	box-shadow: 10px 10px 10px purple;
+	color: orange;
 }
 
 button {
