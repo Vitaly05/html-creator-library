@@ -11,7 +11,8 @@ Style delTextStyle = new Style(
         .Radius("5px", "0")
         .Color(Color.Blue)
         .Style(BorderStyle.Solid, BorderStyle.Double),
-    new Shadow(ShadowType.Box, "10px", "10px", "10px", Color.Red)
+    new Shadow(ShadowType.Box, "10px", "10px", "10px", Color.Red),
+    new TextColor(Color.Blue)
 ).Class("delText");
 
 Style secondStyle = new Style(
