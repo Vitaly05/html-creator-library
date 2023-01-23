@@ -6,8 +6,14 @@
 	border-style: solid double;
 	box-shadow: 10px 10px 10px purple;
 	color: orange;
+	margin: 10px;
 }
 
 button {
 	background: blue;
+	padding: 10px 5px;
+}
+
+.buttonWithText {
+	margin: 20px;
 }

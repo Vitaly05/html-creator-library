@@ -12,12 +12,18 @@ Style delTextStyle = new Style(
         .Color(Color.Yellow)
         .Style(BorderStyle.Solid, BorderStyle.Double),
     new Shadow(ShadowType.Box, "10px", "10px", "10px", Color.Purple),
-    new TextColor(Color.Orange)
+    new TextColor(Color.Orange),
+    new Indent(IndentType.Margin, "10px")
 ).Class("delText");
 
 Style secondStyle = new Style(
-    new Background(Color.Blue)
+    new Background(Color.Blue),
+    new Indent(IndentType.Padding, "10px", "5px")
 ).Selector("button");
+
+Style buttonWithTextStyle = new Style(
+    new Indent(IndentType.Margin, "20px")
+).Class("buttonWithText");
 
 Body testBody = new();
 testBody.SetContext(
@@ -75,6 +81,7 @@ HTML test = new(
 );
 test.SetStyles(
     delTextStyle,
-    secondStyle
+    secondStyle,
+    buttonWithTextStyle
 );
 test.SaveFile();
