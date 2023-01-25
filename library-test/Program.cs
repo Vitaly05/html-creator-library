@@ -25,17 +25,21 @@ Style buttonWithTextStyle = new Style(
     new Indent(IndentType.Margin, "20px")
 ).Class("buttonWithText");
 
+Style divWithDisplayStyle = new Style(
+    new Display(DisplayType.Flex, JustifyContent.SpaceAround)
+).Id("divWithDisplay");
+
 Body testBody = new();
 testBody.SetContext(
     new Div(
         attribute: new HtmlAttribute().Custom("style=\"background: grey;\""),
         new Text(
-        text: "Hello",
-        textType: TextType.Del,
-        attribute: new HtmlAttribute().Class("delText")
-            .Hidden(false)
-            .Data(name: "myData", value: "myValue")
-            .Title("HELLO")
+            text: "Hello",
+            textType: TextType.Del,
+            attribute: new HtmlAttribute().Class("delText")
+                .Hidden(false)
+                .Data(name: "myData", value: "myValue")
+                .Title("HELLO")
         ),
         new LineBreak(),
         new LineBreak(),
@@ -67,6 +71,13 @@ testBody.SetContext(
                 new Text("Second")    
             )
         )
+    ),
+
+    new Div(
+        attribute: new HtmlAttribute().Id("divWithDisplay"),
+        new Text("FFF", TextType.U),
+        new Text("GGG", TextType.I),
+        new Text("HHH", TextType.B)
     )
 );
 
@@ -82,6 +93,7 @@ HTML test = new(
 test.SetStyles(
     delTextStyle,
     secondStyle,
-    buttonWithTextStyle
+    buttonWithTextStyle,
+    divWithDisplayStyle
 );
 test.SaveFile();

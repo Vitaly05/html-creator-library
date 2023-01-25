@@ -17,3 +17,8 @@ button {
 .buttonWithText {
 	margin: 20px;
 }
+
+#divWithDisplay {
+	display: flex;
+	justify-content: space-around;
+}
