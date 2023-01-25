@@ -21,4 +21,7 @@ button {
 #divWithDisplay {
 	display: flex;
 	justify-content: space-around;
+	width: 100%;
+	max-width: 1200px;
+	min-width: 700px;
 }

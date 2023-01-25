@@ -26,7 +26,10 @@ Style buttonWithTextStyle = new Style(
 ).Class("buttonWithText");
 
 Style divWithDisplayStyle = new Style(
-    new Display(DisplayType.Flex, JustifyContent.SpaceAround)
+    new Display(DisplayType.Flex, JustifyContent.SpaceAround),
+    new Size("100%", null),
+    new MaxSize("1200px", null),
+    new MinSize("700px", null)
 ).Id("divWithDisplay");
 
 Body testBody = new();
