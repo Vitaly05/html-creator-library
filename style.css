@@ -24,4 +24,11 @@ button {
 	width: 100%;
 	max-width: 1200px;
 	min-width: 700px;
+
+	font-family: courier;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: small-caps;
+	line-height: 2;
 }

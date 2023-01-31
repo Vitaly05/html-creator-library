@@ -29,7 +29,8 @@ Style divWithDisplayStyle = new Style(
     new Display(DisplayType.Flex, JustifyContent.SpaceAround),
     new Size("100%", null),
     new MaxSize("1200px", null),
-    new MinSize("700px", null)
+    new MinSize("700px", null),
+    new Font().Family(FontFamily.Courier).Size("20px").Style(FontStyle.Normal).Variant("small-caps").Weight("bold").LineHeight("2")
 ).Id("divWithDisplay");
 
 Body testBody = new();
@@ -78,9 +79,13 @@ testBody.SetContext(
 
     new Div(
         attribute: new HtmlAttribute().Id("divWithDisplay"),
-        new Text("FFF", TextType.U),
-        new Text("GGG", TextType.I),
-        new Text("HHH", TextType.B)
+        new Text("FFF✌️", TextType.U),
+        new Text("ggg", TextType.I),
+        new Text("HHH☻", TextType.B),
+        new Div(
+            new Text("10"),
+            new Text("2", TextType.Sup)
+        )
     )
 );
 
