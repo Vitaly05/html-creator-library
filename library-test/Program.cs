@@ -31,11 +31,20 @@ Style buttonWithTextStyle = new Style(
 
 Style divWithDisplayStyle = new Style(
     new Display(DisplayType.Flex, JustifyContent.SpaceAround),
-    new Size("100%", null),
+    new Size("100%", "200px"),
     new MaxSize("1200px", null),
     new MinSize("700px", null),
     new Font().Family(FontFamily.Courier).Size("20px").Style(FontStyle.Normal).Variant("small-caps").Weight("bold").LineHeight("2")
 ).Id("divWithDisplay");
+
+Style divvStyle = new Style(
+    new Size(null, "50px")
+).Id("divv");
+
+Style topFTextStyle = new Style(
+    new VerticalAlign(VerticalAlignType.Super)
+).Id("topFText");
+
 
 Body testBody = new();
 testBody.SetContext(
@@ -90,6 +99,12 @@ testBody.SetContext(
             new Text("10"),
             new Text("2", TextType.Sup)
         )
+    ),
+    new LineBreak(),
+    new Div(
+        new HtmlAttribute().Id("divv"),
+        new Text("fff", TextType.B),
+        new Text("fff", TextType.B, new HtmlAttribute().Id("topFText"))
     )
 );
 
@@ -106,6 +121,8 @@ test.SetStyles(
     delTextStyle,
     secondStyle,
     buttonWithTextStyle,
-    divWithDisplayStyle
+    divWithDisplayStyle,
+    divvStyle,
+    topFTextStyle
 );
 test.SaveFile();
