@@ -14,7 +14,8 @@ Style delTextStyle = new Style(
     new Shadow(ShadowType.Box, "10px", "10px", "10px", Color.Purple),
     new TextColor(Color.Orange),
     new Indent(IndentType.Margin, "10px"),
-    new Opacity("50%")
+    new Opacity("50%"),
+    new Position(PositionType.Fixed).Top("150px").Left("500px")
 ).Class("delText");
 
 Style secondStyle = new Style(

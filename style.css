@@ -8,6 +8,9 @@
 	color: orange;
 	margin: 10px;
 	opacity: 50%;
+	position: fixed;
+	top: 150px;
+	left: 500px;
 }
 
 button {
