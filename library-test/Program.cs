@@ -24,7 +24,9 @@ Style secondStyle = new Style(
 ).Selector("button");
 
 Style buttonWithTextStyle = new Style(
-    new Indent(IndentType.Margin, "20px")
+    new Indent(IndentType.Margin, "20px"),
+    new Size("100px", null),
+    new BoxSizing(BoxSizingType.BorderBox)
 ).Class("buttonWithText");
 
 Style divWithDisplayStyle = new Style(
