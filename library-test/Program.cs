@@ -13,7 +13,8 @@ Style delTextStyle = new Style(
         .Style(BorderStyle.Solid, BorderStyle.Double),
     new Shadow(ShadowType.Box, "10px", "10px", "10px", Color.Purple),
     new TextColor(Color.Orange),
-    new Indent(IndentType.Margin, "10px")
+    new Indent(IndentType.Margin, "10px"),
+    new Opacity("50%")
 ).Class("delText");
 
 Style secondStyle = new Style(
