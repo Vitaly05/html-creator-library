@@ -4,6 +4,7 @@
     {
         private List<StyleComponent> styleParams = new List<StyleComponent>();
         private string selector;
+        private string pseudoClass;
 
         public Style(params StyleComponent[] styleParams)
         {
@@ -26,12 +27,58 @@
             return this;
         }
 
+        public Style Active()
+        {
+            pseudoClass = ":active";
+            return this;
+        }
+        public Style Checked()
+        {
+            pseudoClass = ":checked";
+            return this;
+        }
+        public Style Default()
+        {
+            pseudoClass = ":default";
+            return this;
+        }
+        public Style Defined()
+        {
+            pseudoClass = ":defined";
+            return this;
+        }
+        public Style Empty()
+        {
+            pseudoClass = ":empty";
+            return this;
+        }
+        public Style Focus()
+        {
+            pseudoClass = ":focus";
+            return this;
+        }
+        public Style Hover()
+        {
+            pseudoClass = ":hover";
+            return this;
+        }
+        public Style InRange()
+        {
+            pseudoClass = ":in-range";
+            return this;
+        }
+        public Style PseudoClass(string pseudoClass)
+        {
+            this.pseudoClass = pseudoClass;
+            return this;
+        }
+
         internal string GetCss()
         {
             string start = "{";
             string end = "}";
             return
-                $"{selector} {start}\n" +
+                $"{selector}{pseudoClass} {start}\n" +
                 $"{getInnerComponentsCss()}\n" +
                 $"{end}";
         }

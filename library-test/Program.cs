@@ -23,6 +23,16 @@ Style secondStyle = new Style(
     new Indent(IndentType.Padding, "10px", "5px")
 ).Selector("button");
 
+Style secondHoverStyle = new Style(
+    new Background(Color.Red),
+    new Indent(IndentType.Padding, "10px", "5px")
+).Selector("button").Hover();
+
+Style secondCustomStyle = new Style(
+    new Background(Color.Green),
+    new Indent(IndentType.Padding, "10px", "5px")
+).Selector("button").PseudoClass(":active");
+
 Style buttonWithTextStyle = new Style(
     new Indent(IndentType.Margin, "20px"),
     new Size("100px", null),
@@ -120,6 +130,8 @@ HTML test = new(
 test.SetStyles(
     delTextStyle,
     secondStyle,
+    secondHoverStyle,
+    secondCustomStyle,
     buttonWithTextStyle,
     divWithDisplayStyle,
     divvStyle,

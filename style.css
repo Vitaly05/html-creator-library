@@ -18,6 +18,16 @@ button {
 	padding: 10px 5px;
 }
 
+button:hover {
+	background: red;
+	padding: 10px 5px;
+}
+
+button:active {
+	background: green;
+	padding: 10px 5px;
+}
+
 .buttonWithText {
 	margin: 20px;
 	width: 100px;
