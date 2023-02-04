@@ -1,11 +1,11 @@
-﻿namespace html_creator_library.BodyComponents
+﻿namespace html_creator_library.BodyComponents.Containers
 {
-    public class UnorderedList : BodyComponent
+    public class OrderedList : BodyComponent
     {
-        public UnorderedList(params ListItem[] items)
+        public OrderedList(params ListItem[] items)
             : this(new HtmlAttribute(), items) { }
 
-        public UnorderedList(HtmlAttribute attribute, params ListItem[] items)
+        public OrderedList(HtmlAttribute attribute, params ListItem[] items)
             : base(attribute)
         {
             innerHtmlComponents.AddRange(items);
@@ -15,9 +15,9 @@
             innerTab = outTab + "\t";
 
             return
-                $"{outTab}<ul{attribute.GetAttributes()}>\n" +
+                $"{outTab}<ol{attribute.GetAttributes()}>\n" +
                 $"{getInnerComponentsHtml()}\n" +
-                $"{outTab}</ul>";
+                $"{outTab}</ol>";
         }
     }
 }

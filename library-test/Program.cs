@@ -104,6 +104,11 @@ Main testMain = new Main(
                     attribute: new HtmlAttribute().Id("bText")
                 )
         )
+    ),
+    new Menu(
+        new ListItem(new Text("1")),
+        new ListItem(new Text("2")),
+        new ListItem(new Text("3"))
     )
 );
 
