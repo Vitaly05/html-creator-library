@@ -20,7 +20,8 @@ Style delTextStyle = new Style(
 
 Style secondStyle = new Style(
     new Background(Color.Blue),
-    new Indent(IndentType.Padding, "10px", "5px")
+    new Indent(IndentType.Padding, "10px", "5px"),
+    new Transition(DefaultProperty.Background).SetDuration("1s").SetTimingFunction(TimingFunction.EaseInOut).SetDelay("0.1s")
 ).Selector("button");
 
 Style secondHoverStyle = new Style(
