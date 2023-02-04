@@ -1,4 +1,4 @@
-﻿namespace html_creator_library.BodyComponents
+﻿namespace html_creator_library.BodyComponents.Containers
 {
     public class Span : BodyComponent
     {

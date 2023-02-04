@@ -1,5 +1,6 @@
 ﻿using html_creator_library;
 using html_creator_library.BodyComponents;
+using html_creator_library.BodyComponents.Containers;
 using html_creator_library.HeadComponents;
 using html_creator_library.Css;
 using html_creator_library.Css.StyleComponents;
@@ -56,9 +57,7 @@ Style topFTextStyle = new Style(
     new VerticalAlign(VerticalAlignType.Super)
 ).Id("topFText");
 
-
-Body testBody = new();
-testBody.SetContext(
+Header testHeader = new Header(
     new Div(
         attribute: new HtmlAttribute().Custom("style=\"background: grey;\""),
         new Text(
@@ -80,15 +79,60 @@ testBody.SetContext(
                     attribute: new HtmlAttribute().Id("bText")
                 )
         )
-    ),
-    new Line(new HtmlAttribute().Color("red").Size("20px").Width("90%")),
+    )
+);
+
+Main testMain = new Main(
+    new Div(
+        attribute: new HtmlAttribute().Custom("style=\"background: grey;\""),
+        new Text(
+            text: "Hello",
+            textType: TextType.Del,
+            attribute: new HtmlAttribute().Class("delText")
+                .Hidden(false)
+                .Data(name: "myData", value: "myValue")
+                .Title("HELLO")
+        ),
+        new LineBreak(),
+        new LineBreak(),
+        new Button(
+            attribute: new HtmlAttribute().Class("buttonWithText"),
+            components:
+                new Text(
+                    text: "button",
+                    textType: TextType.B,
+                    attribute: new HtmlAttribute().Id("bText")
+                )
+        )
+    )
+);
+
+Article testArticle = new Article(
     new Text(
         text: "Without attribute"
-    ),
+    )
+);
+
+Section testSection = new Section(
     new Span("ffff", new HtmlAttribute().Color("red")),
     new LineBreak(),
     new TextArea("Inner text"),
-    new Input(InputType.Color),
+    new Input(InputType.Color)
+);
+
+Footer testFooter = new Footer(
+    new Text("Footer", TextType.B)
+);
+
+Body testBody = new();
+testBody.SetContext(
+    testHeader,
+    testMain,
+
+    new Line(new HtmlAttribute().Color("red").Size("20px").Width("90%")),
+    
+    testArticle,
+    testSection,
 
     new UnorderedList(
         new ListItem(
@@ -96,7 +140,7 @@ testBody.SetContext(
         ),
         new ListItem(
             new Button(
-                new Text("Second")    
+                new Text("Second")
             )
         )
     ),
@@ -116,7 +160,9 @@ testBody.SetContext(
         new HtmlAttribute().Id("divv"),
         new Text("fff", TextType.B),
         new Text("fff", TextType.B, new HtmlAttribute().Id("topFText"))
-    )
+    ),
+
+    testFooter
 );
 
 Head testHead = new();
