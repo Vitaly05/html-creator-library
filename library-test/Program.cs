@@ -61,7 +61,9 @@ Style topFTextStyle = new Style(
 ).Id("topFText");
 
 Style mainContainerStyle = new Style(
-    new Background().SetImage("img/2.jpg").SetAttachment(AttachmentType.Local)
+    new Background().SetImage("img/2.jpg").SetAttachment(AttachmentType.Local),
+    new Size(null, "100px"),
+    new Overflow().Y(OverflowType.Scroll)
 ).Id("mainContainer");
 
 Style sectionContainerStyle = new Style(
