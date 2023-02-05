@@ -78,5 +78,5 @@ button:active {
 
 #sectionContainer {
 
-	background-image: linear-gradient(gray, white);
+	background-image: linear-gradient(90deg, gray, white);
 }

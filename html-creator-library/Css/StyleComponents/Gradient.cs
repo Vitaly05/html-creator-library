@@ -3,6 +3,7 @@
     public class Gradient
     {
         private string gradientType;
+        private string angle;
         private string colors = "";
 
         public Gradient(string gradientType, params string[] colors)
@@ -14,10 +15,19 @@
                 if (iii != colors.Length - 1) this.colors += ", ";
             }
         }
+        public Gradient(string gradientType, string angle, params string[] colors)
+            : this(gradientType, colors)
+        {
+            this.angle = angle;
+        }
 
         public override string ToString()
         {
-            return $"{gradientType}({colors})";
+            string result = $"{gradientType}(";
+            if (angle is not null) result += $"{angle}, ";
+            result += $"{colors})";
+
+            return result;
         }
     }
 

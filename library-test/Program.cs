@@ -65,7 +65,7 @@ Style mainContainerStyle = new Style(
 ).Id("mainContainer");
 
 Style sectionContainerStyle = new Style(
-    new Background().SetGradient(new Gradient(GradientType.LinearGradient, Color.Gray, Color.White))
+    new Background().SetGradient(new Gradient(GradientType.LinearGradient, "90deg", Color.Gray, Color.White))
 ).Id("sectionContainer");
 
 
