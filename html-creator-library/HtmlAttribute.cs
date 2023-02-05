@@ -71,6 +71,11 @@
             addAttribute($"width=\"{width}\"");
             return this;
         }
+        public HtmlAttribute Height(string height)
+        {
+            addAttribute($"height=\"{height}\"");
+            return this;
+        }
 
         public HtmlAttribute Custom(string attrubute)
         {
