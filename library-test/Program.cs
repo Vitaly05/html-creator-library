@@ -6,6 +6,9 @@ using html_creator_library.Css;
 using html_creator_library.Css.StyleComponents;
 
 
+const string siteFolder = "../../../../site/";
+
+
 Style delTextStyle = new Style(
     new Background(Color.DarkOliveGreen),
     new Border().Width("5px", "10px")
@@ -109,7 +112,8 @@ Main testMain = new Main(
         new ListItem(new Text("1")),
         new ListItem(new Text("2")),
         new ListItem(new Text("3"))
-    )
+    ),
+    new Image($"img/1.jpg", "cat", new HtmlAttribute().Width("100px"))
 );
 
 Article testArticle = new Article(
@@ -189,4 +193,4 @@ test.SetStyles(
     divvStyle,
     topFTextStyle
 );
-test.SaveFile();
+test.SaveFile(siteFolder);
