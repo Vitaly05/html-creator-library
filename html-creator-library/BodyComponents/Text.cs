@@ -60,5 +60,6 @@
         public static string Small = "small";
         public static string Sup = "sup";
         public static string Sub = "sub";
+        public static string Font = "font";
     }
 }

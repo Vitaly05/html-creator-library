@@ -30,7 +30,7 @@
 
         internal override string GetCss()
         {
-            string result = $"\ttransition-property: {property};";
+            string result = $"\n\ttransition-property: {property};";
 
             if (duration is not null) result += $"\n\ttransition-duration: {duration};";
             if (timingFunction is not null) result += $"\n\ttransition-timing-function: {timingFunction};";

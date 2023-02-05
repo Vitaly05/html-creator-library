@@ -10,7 +10,7 @@ const string siteFolder = "../../../../site/";
 
 
 Style delTextStyle = new Style(
-    new Background(Color.DarkOliveGreen),
+    new Background().SetColor(Color.DarkOliveGreen),
     new Border().Width("5px", "10px")
         .Radius("5px", "0")
         .Color(Color.Yellow)
@@ -23,18 +23,18 @@ Style delTextStyle = new Style(
 ).Class("delText");
 
 Style secondStyle = new Style(
-    new Background(Color.Blue),
+    new Background().SetColor(Color.Blue),
     new Indent(IndentType.Padding, "10px", "5px"),
     new Transition(DefaultProperty.Background).SetDuration("1s").SetTimingFunction(TimingFunction.EaseInOut).SetDelay("0.1s")
 ).Selector("button");
 
 Style secondHoverStyle = new Style(
-    new Background(Color.Red),
+    new Background().SetColor(Color.Red),
     new Indent(IndentType.Padding, "10px", "5px")
 ).Selector("button").Hover();
 
 Style secondCustomStyle = new Style(
-    new Background(Color.Green),
+    new Background().SetColor(Color.Green),
     new Indent(IndentType.Padding, "10px", "5px")
 ).Selector("button").PseudoClass(":active");
 
@@ -59,6 +59,15 @@ Style divvStyle = new Style(
 Style topFTextStyle = new Style(
     new VerticalAlign(VerticalAlignType.Super)
 ).Id("topFText");
+
+Style mainContainerStyle = new Style(
+    new Background().SetImage("img/2.jpg").SetAttachment(AttachmentType.Local)
+).Id("mainContainer");
+
+Style sectionContainerStyle = new Style(
+    new Background().SetGradient(new Gradient(GradientType.LinearGradient, Color.Gray, Color.White))
+).Id("sectionContainer");
+
 
 Header testHeader = new Header(
     new Div(
@@ -86,8 +95,9 @@ Header testHeader = new Header(
 );
 
 Main testMain = new Main(
+    attribute: new HtmlAttribute().Id("mainContainer"),
     new Div(
-        attribute: new HtmlAttribute().Custom("style=\"background: grey;\""),
+        attribute: new HtmlAttribute(),
         new Text(
             text: "Hello",
             textType: TextType.Del,
@@ -109,9 +119,9 @@ Main testMain = new Main(
         )
     ),
     new Menu(
-        new ListItem(new Text("1")),
-        new ListItem(new Text("2")),
-        new ListItem(new Text("3"))
+        new ListItem(new Text("1", TextType.Font, new HtmlAttribute().Color(Color.White))),
+        new ListItem(new Text("2", TextType.Font, new HtmlAttribute().Color(Color.White))),
+        new ListItem(new Text("3", TextType.Font, new HtmlAttribute().Color(Color.White)))
     ),
     new Image($"img/1.jpg", "cat", new HtmlAttribute().Width("100px"))
 );
@@ -123,6 +133,7 @@ Article testArticle = new Article(
 );
 
 Section testSection = new Section(
+    attribute: new HtmlAttribute().Id("sectionContainer"),
     new Span("ffff", new HtmlAttribute().Color("red")),
     new LineBreak(),
     new TextArea("Inner text"),
@@ -191,6 +202,8 @@ test.SetStyles(
     buttonWithTextStyle,
     divWithDisplayStyle,
     divvStyle,
-    topFTextStyle
+    topFTextStyle,
+    mainContainerStyle,
+    sectionContainerStyle
 );
 test.SaveFile(siteFolder);

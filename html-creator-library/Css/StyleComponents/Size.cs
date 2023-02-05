@@ -18,7 +18,7 @@
             string result = "";
 
             if (width is not null)
-                result += $"\twidth: {width};";
+                result += $"\n\twidth: {width};";
             if (height is not null)
                 result += $"\n\theight: {height};";
 
