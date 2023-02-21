@@ -189,7 +189,9 @@ testBody.SetContext(
 
 Head testHead = new();
 testHead.SetContext(
-    new Title("Test")
+    new Title("Test"),
+    new Meta("utf-8"),
+    new Meta().HttpEquiv("refresh", "50")
 );
 
 HTML test = new(
