@@ -18,11 +18,11 @@
             this.styles.AddRange(styles);
         }
 
-        public void SaveFile(string path = "../../../../")
+        public void SaveFile(string path = "../../../../", string htmlName = null, string cssName = null)
         {
             if (styles.Count > 0)
-                saveCss(path, "style.css");
-            saveHtml(path, "index.html");
+                saveCss(path, cssName ?? "style.css");
+            saveHtml(path, htmlName ??"index.html");
         }
 
         private void saveHtml(string path, string name)
