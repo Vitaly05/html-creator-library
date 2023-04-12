@@ -210,4 +210,4 @@ test.SetStyles(
     mainContainerStyle,
     sectionContainerStyle
 );
-test.SaveFile(siteFolder, htmlName: "start.html", cssName: "myStyle");
+test.SaveFile(siteFolder, htmlName: "start.html", cssName: "myStyle.css");

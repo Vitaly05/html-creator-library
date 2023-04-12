@@ -9,11 +9,18 @@
 
         internal override string GetCss()
         {
-            return
-                $"\tborder-width: {width};\n" +
-                $"\tborder-color: {color};\n" +
-                $"\tborder-radius: {radius};\n" +
-                $"\tborder-style: {style};";
+            string css = "";
+
+            if (width is not null)
+                css = String.Concat(css, $"\tborder-width: {width};\n");
+            if (color is not null)
+                css = String.Concat(css, $"\tborder-color: {color};\n");
+            if (radius is not null)
+                css = String.Concat(css, $"\tborder-radius: {radius};\n");
+            if (style is not null)
+                css = String.Concat(css, $"\tborder-style: {style};\n");
+
+            return css;
         }
 
         public Border Width(string width)
