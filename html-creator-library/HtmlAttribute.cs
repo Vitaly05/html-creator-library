@@ -77,9 +77,9 @@
             return this;
         }
 
-        public HtmlAttribute Custom(string attrubute)
+        public HtmlAttribute Custom(string attribute)
         {
-            addAttribute(attrubute);
+            addAttribute(attribute);
             return this;
         }
     }
