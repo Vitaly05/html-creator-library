@@ -2,6 +2,9 @@
 
 	background-color: darkolivegreen;
 	border-width: 5px 10px;
+	border-color: yellow;
+	border-radius: 5px 0;
+	border-style: solid double;
 
 	box-shadow: 10px 10px 10px purple;
 	color: orange;

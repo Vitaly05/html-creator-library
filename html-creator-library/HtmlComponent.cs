@@ -8,6 +8,11 @@
 
         internal abstract string GetHtml(string outTab);
 
+        public string GetStringHtml()
+        {
+            return GetHtml("");
+        }
+
         protected string getInnerComponentsHtml()
         {
             if (innerHtmlComponents.Count == 0)

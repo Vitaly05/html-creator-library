@@ -25,6 +25,11 @@
             saveHtml(path, htmlName ??"index.html");
         }
 
+        public string GetStringHtml()
+        {
+            return getHtml();
+        }
+
         private void saveHtml(string path, string name)
         {
             using (StreamWriter sw = new(new FileStream(path + name, FileMode.Create)))

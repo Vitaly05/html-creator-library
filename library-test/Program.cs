@@ -4,6 +4,11 @@ using html_creator_library.BodyComponents.Containers;
 using html_creator_library.HeadComponents;
 using html_creator_library.Css;
 using html_creator_library.Css.StyleComponents;
+using library_test;
+
+IndividualElements individualElements = new();
+Console.WriteLine(individualElements.GetBlockOfButtons());
+
 
 
 const string siteFolder = "../../../../site/";
