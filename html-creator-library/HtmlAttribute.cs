@@ -24,6 +24,11 @@
             addAttribute($"id=\"{id}\"");
             return this;
         }
+        public HtmlAttribute Name(string name)
+        {
+            addAttribute($"name=\"{name}\"");
+            return this;
+        }
         public HtmlAttribute AccessKey(string accessKey)
         {
             addAttribute($"accesskey=\"{accessKey}\"");
@@ -74,6 +79,11 @@
         public HtmlAttribute Height(string height)
         {
             addAttribute($"height=\"{height}\"");
+            return this;
+        }
+        public HtmlAttribute For(string value)
+        {
+            addAttribute($"for=\"{value}\"");
             return this;
         }
 
