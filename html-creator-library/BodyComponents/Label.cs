@@ -17,6 +17,7 @@
             return
                 $"{outTab}<label{attribute.GetAttributes()}>\n" +
                 $"{getInnerComponentsHtml()}\n" +
-                $"{outTab}</label>";        }
+                $"{outTab}</label>";        
+        }
     }
 }
