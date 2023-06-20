@@ -50,7 +50,6 @@
         public static string Em = "em";
         public static string Strong = "strong";
         public static string Del = "del";
-        public static string A = "a";
         public static string Abbr = "abbr";
         public static string Address = "address";
         public static string Blockquote = "blockquote";
