@@ -2,10 +2,10 @@
 {
     public class Button : BodyComponent
     {      
-        public Button(params HtmlComponent[] components)
+        public Button(params BodyComponent[] components)
             : this(new HtmlAttribute(), components) { }
 
-        public Button(HtmlAttribute attribute, params HtmlComponent[] components)
+        public Button(HtmlAttribute attribute, params BodyComponent[] components)
             : base(attribute)
         {
             innerHtmlComponents.AddRange(components);
